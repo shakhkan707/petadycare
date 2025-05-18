@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #9fc5fe;
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер чата */
+.chat-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    height: 500px;
+    background-image: url('images/chat-bg.jpg'); /* путь к изображению */
+    background-size: cover;          /* растянуть по размеру блока */
+    background-position: center;     /* центрировать */
+    background-repeat: no-repeat;    /* не повторять */
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    flex-direction: column;
+    padding: 20px;
+    
+}
+
+/* Сообщения */
+.message {
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 20px;
+    max-width: 70%;
+    line-height: 1.4;
+    word-wrap: break-word;
+    position: relative;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.message.sent {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.message.received {
+    background: #f1f0f0;
+    color: #333;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+
+.message small {
+    display: block;
+    text-align: right;
+    color: #888;
+    font-size: 0.75rem;
+    margin-top: 6px;
+}
+
+/* Форма отправки */
+.message-form {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    min-height: 90px;
+    font-size: 1rem;
+    transition: box-shadow 0.2s;
+}
+
+.message-form textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+    border-color: #80bdff;
+    outline: none;
+}
+
+.message-form button {
+    align-self: flex-end;
+    padding: 10px 24px;
+    font-size: 1rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.message-form button:hover {
+    background: #0056b3;
+}
+
+/* Кнопка назад */
+a[href*="Назад"] {
+    display: inline-block;
+    margin: 20px auto;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+a[href*="Назад"]:hover {
+    color: #0056b3;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    background-color: #f8f9fa;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background-color: #e2e6ea;
+    color: #000;
+}
+
+
+
+
